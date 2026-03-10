@@ -1,0 +1,76 @@
+Algorithms Used in the Voice Assistant
+
+1. DFS (Depth First Search)
+Used for parsing commands from the command tree.
+Example: "open youtube"
+The algorithm navigates the command tree and resolves the command into the action "open_youtube".
+
+2. BFS (Breadth First Search)
+Used for task planning when executing simple commands.
+Example: "browser"
+The algorithm finds the shortest sequence of steps from the start node to the task "open_browser".
+
+3. UCS (Uniform Cost Search)
+Used when actions have different costs.
+Example: "youtube"
+The assistant chooses the lowest-cost path to open YouTube.
+
+4. A* Search
+Used to locate a target node efficiently using heuristics.
+Example: "resume"
+The algorithm searches the graph and finds the path:
+start → documents → resume_file.
+
+5. DLS (Depth Limited Search)
+Used to search a graph with a depth restriction.
+Example command: "dls"
+The algorithm searches until a depth limit is reached and returns a path if found.
+
+6. IDDFS (Iterative Deepening Depth First Search)
+Used to search deeper levels step-by-step.
+Example command: "iddfs"
+The algorithm repeatedly performs depth-limited searches with increasing limits until the goal is found.
+
+7. Bidirectional Search
+Used to speed up search by exploring from both the start node and the goal node simultaneously.
+Example command: "bidirectional"
+The two searches meet in the middle to find the path faster.
+
+8. RBFS (Recursive Best First Search)
+Used as a memory-efficient heuristic search similar to A*.
+Example command: "rbfs"
+The algorithm finds the best path using recursion and limited memory.
+
+9. Hill Climbing
+Used for optimization by selecting the best option based on a score.
+Example command: "best browser"
+The assistant chooses the browser with the highest score (e.g., chrome).
+
+10. Genetic Algorithm
+Used for evolutionary optimization.
+Example command: "genetic"
+The algorithm evaluates multiple options and selects the best one through simulated evolution.
+
+11. Simulated Annealing
+Used for probabilistic optimization to avoid local maxima.
+Example command: "annealing"
+The algorithm explores options and occasionally accepts worse solutions to find a better global solution.
+
+12. Minimax
+Used for decision-making in games.
+Example command: "minimax"
+The algorithm calculates the best move for a Tic-Tac-Toe board.
+
+13. First Order Logic (FOL)
+Used for logical reasoning using facts and rules.
+Example command: "logic demo"
+From the facts:
+Human(Socrates)
+Human(x) → Mortal(x)
+The assistant infers:
+Mortal(Socrates)
+
+14. CSP (Constraint Satisfaction Problem)
+Used to generate valid schedules with constraints.
+Example command: "schedule study"
+The algorithm assigns time slots to subjects without conflicts.
